@@ -7,4 +7,23 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\bundles\Elsa\Elsa.csproj" />
+      <ProjectReference Include="..\..\..\modules\Elsa.Workflows.Core\Elsa.Workflows.Core.csproj" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <PackageReference Include="OpenAI-DotNet" Version="7.0.9" />
+
+
+    </ItemGroup>
+
+
+
+
+
+
+
 </Project>

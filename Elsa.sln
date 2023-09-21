@@ -237,6 +237,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Samples.AspNet.ChildWo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Samples.AspNet.DocumentApproval", "src\samples\aspnet\Elsa.Samples.AspNet.DocumentApproval\Elsa.Samples.AspNet.DocumentApproval.csproj", "{CA9391E3-FA3F-4F96-B6DF-25309BFE7D05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Samples.ConsoleApp.OpenAi", "src\samples\console\Elsa.Samples.ConsoleApp.OpenAi\Elsa.Samples.ConsoleApp.OpenAi.csproj", "{624269D5-E959-458A-9D29-77BAE74B4AFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -591,6 +593,10 @@ Global
 		{CA9391E3-FA3F-4F96-B6DF-25309BFE7D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA9391E3-FA3F-4F96-B6DF-25309BFE7D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA9391E3-FA3F-4F96-B6DF-25309BFE7D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{624269D5-E959-458A-9D29-77BAE74B4AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{624269D5-E959-458A-9D29-77BAE74B4AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{624269D5-E959-458A-9D29-77BAE74B4AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{624269D5-E959-458A-9D29-77BAE74B4AFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{155227F0-A33B-40AA-A4B4-06F813EB921B} = {61017E64-6D00-49CB-9E81-5002DC8F7D5F}
@@ -697,5 +703,6 @@ Global
 		{B99B23D4-6D36-4A31-BE92-DE2415514C79} = {08B41FFA-CEE3-46A7-B5C0-3EB65D37A16C}
 		{2EA47068-6079-4276-8776-F67DE99B568D} = {56C2FFB8-EA54-45B5-A095-4A78142EB4B5}
 		{CA9391E3-FA3F-4F96-B6DF-25309BFE7D05} = {56C2FFB8-EA54-45B5-A095-4A78142EB4B5}
+		{624269D5-E959-458A-9D29-77BAE74B4AFA} = {873BFC3E-63C2-4495-A503-5EC05DCD84E4}
 	EndGlobalSection
 EndGlobal

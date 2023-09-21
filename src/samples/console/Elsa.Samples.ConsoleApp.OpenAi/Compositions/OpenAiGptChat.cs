@@ -1,15 +1,15 @@
 using Elsa.Extensions;
+using Elsa.Samples.ConsoleApp.OpenAi.Activities;
 using Elsa.Samples.ConsoleApp.OpenAi.Models;
 using Elsa.Workflows.Core;
 using Elsa.Workflows.Core.Activities;
 using Elsa.Workflows.Core.Memory;
 using Elsa.Workflows.Core.Models;
 
-namespace Elsa.Samples.ConsoleApp.OpenAi.Activities.Compositions;
+namespace Elsa.Samples.ConsoleApp.OpenAi.Compositions;
 
 public class OpenAiGptChat : Composite<OpenAiResponse>
 {
-    public Input<OpenAiRequest> OpenAiRequest { get; set; }
     public Variable<int> MaximumAttempts { get; set; } = new(3);
     public Variable<int> AttemptsNumbers { get; set; } = new(0);
     public Variable<string> InputRead { get; set; } = new();
@@ -17,8 +17,6 @@ public class OpenAiGptChat : Composite<OpenAiResponse>
     
     public OpenAiGptChat(Variable<OpenAiRequest> openAiRequest)
     {
-        OpenAiRequest = new Input<OpenAiRequest>(openAiRequest);
-        
         Variables = new List<Variable> { openAiRequest, OpenAiResponse, MaximumAttempts, AttemptsNumbers, InputRead };
         Root = new Sequence
         {
@@ -34,7 +32,6 @@ public class OpenAiGptChat : Composite<OpenAiResponse>
                             new If
                             {
                                 Condition = new (context => !OpenAiResponse.Get<OpenAiResponse>(context)!.IsSucceeded),
-                                // Then = new WriteLine(context => $"response: { OpenAiResponse.Get<OpenAiResponse>(context)?.Result}"),
                                 Then = new Sequence
                                 {
                                     Activities =
